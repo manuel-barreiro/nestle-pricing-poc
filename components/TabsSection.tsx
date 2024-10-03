@@ -2,6 +2,10 @@ import React from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
 import { ScrollArea } from "./ui/scroll-area"
 import DragDropTable from "./DragDropTable"
+import { InteractiveBarChart } from "./InteractiveBarChart"
+import { NestlePieChart } from "./NestlePieChart"
+import { NestleLineChart } from "./NestleLineChart"
+import { NestleRadarChart } from "./NestleRadarChart"
 
 export default function TabsSection() {
   return (
@@ -18,6 +22,26 @@ export default function TabsSection() {
       <TabsContent value="price-impact" className="h-full p-4">
         <ScrollArea className="h-full">
           <DragDropTable />
+        </ScrollArea>
+      </TabsContent>
+      <TabsContent value="market-share" className="h-full p-4">
+        <ScrollArea className="h-full">
+          <InteractiveBarChart />
+        </ScrollArea>
+      </TabsContent>
+      <TabsContent value="cmc" className="h-full p-4">
+        <ScrollArea className="h-full">
+          <NestlePieChart />
+        </ScrollArea>
+      </TabsContent>
+      <TabsContent value="competition" className="h-full p-4">
+        <ScrollArea className="h-full">
+          <NestleLineChart />
+        </ScrollArea>
+      </TabsContent>
+      <TabsContent value="elasticities" className="h-full p-4">
+        <ScrollArea className="h-full">
+          <NestleRadarChart />
         </ScrollArea>
       </TabsContent>
     </Tabs>
